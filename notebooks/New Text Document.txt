@@ -1,0 +1,182 @@
+# Business Understanding
+## 1 Determining Business Objectives
+### 1.1 Finding Business Objectives
+As the amount of ships is increasing in the world and someone will dare to build the biggest cruising ship, I am going to create a predication model which will predict based on some details wheater you will make it if the ships crushes into something big in the waste sea
+
+Objectives:
+Predict if a passenger will make it on the next ship crash in atlantic
+Identifying meaningful patterns in features will help improve model’s accuracy
+
+#### Determine Organizational Structure
+This project was picked from the course instructor's choices. It is conducted as part of an individual assignment and is evaluated according to the rubrics  of the course. 
+
+Student - I am going to be evaluated by the Course instructor based on rubrics
+Course Instructor - Evaluates the student based on the rubrics
+
+The project are used for educational purposes. They demonstrate my ability to apply the CRISP-DM methodology and basic data science techniques
+
+The problem area of this project is data analysis and predictive modeling. The focus is  using historical passenger data to understand and predict survival outcomes from the Titanic disaster.
+
+#### Describe Problem Area
+My aim is to use historical passenger data to predict survival outcomes from the Titanic disaster. 
+
+I am going to look into the details of passenger like age, sex, if they had siblings or spouses, number of parents and children abroad, where they boarded the ship which class they bought or if they survived and predict if the passenger would survive the sinking ship. 
+
+The project assumes that I have basic knowledge of Python and common data analysis tools. It also assumes that I am familiar with basic machine learning concepts that were introduced during the course.
+
+The data mining project is appointed to me as part of the course requirements. The scope, constraints, and evaluation criteria are defined by assignment description.
+
+#### Describe Current Solution
+Currently, there is no existing solution for this project. This is the start of the work, so I first set up the project structure using a cookiecutter-style template and created a conda environment for the project.
+
+### 1.2 Defining Business Objectives
+The problem in this project is to predict passenger survival on the Titanic using available passenger data.
+
+The business goal would be very wierd, but its to predict if you would survive sinking ship Titanic.
+
+The other requirements would be to follow rubrics; 
+I must follow the CRISP-DM process and structure my notebook using the CRISP-DM phases
+I must document my work clearly so the instructor can follow what I did and why
+I must show decision-making
+The project should be reproducible
+I must clearly describe the problem context and what I am trying to solve
+I must implement the full workflow up to modeling and evaluation
+I must validate results
+I must use plots/tables to support conclusions
+The analysis should be correct and consistent with the chosen goal
+The conclusions should be supported by evidence from the data
+
+The benefits of this project would be to predict based on data if I would survive the Titanic
+
+### 1.3 Business Success Criteria
+The business success criteria are straight forward; The final model can predict with 75% probability that if you survived or not the Titanic ride. 
+Key survival factors will be identified.The evidence is supported by analysis and visualizations
+The project is reproducible.
+
+Subjective criteria
+The results and conclusions are easy to understand and clearly explained
+The workflow follows CRISP-DM properly and is well documented. 
+
+## 2 Assessing the Situation
+Data
+The data available for this project is a single structured dataset in CSV format named titanic1.csv. Each row represents one passenger. The dataset is labeled, which makes it suitable for supervised machine learning, especially a binary classification task survived vs. not survived.
+
+The dataset contains the following main columns:
+Passengerid: unique passenger ID
+Age: passenger age number
+Fare: ticket price number
+Sex: encoded as 0 or 1
+sibsp: number of siblings/spouses aboard
+Parch: number of parents/children aboard
+Pclass: passenger class (1, 2, 3)
+Embarked: encoded embarkation port
+2urvived: target variable 0 or 1
+zero / zero.*: columns filled with 0 values
+
+Some variables are already encoded  Sex, Embarked, so their meaning needs to be verified during Data Understanding. The dataset also includes multiple “zero” columns, which will be checked and removed during Data Preparation if they contain no useful information
+
+Personnel
+The project is carried out by one student. Basic Python and machine learning knowledge is assumed from the course, and guidance is available through course materials and the instructor.
+
+Risks
+The main risks are missing or inconsistent which will need to be verified, non-informative columns like the zero columns, and overfitting due to the dataset size. There is also a risk of misunderstanding encoded variables if there is no clear explain behind it 
+
+Contingency plan
+To handle these risks, the dataset will be checked for missing values and consistency, non-informative columns will be removed after verification.
+
+### 2.1 Resource Inventory
+This project is executed on a personal computer. Its basic machine learning, no specific one needed.
+ 
+The primary data source for this project is a single CSV file titanic1.csv. provided as part of the course assignment. The data is stored locally and accessed directly through the Python environment. No security issues 
+
+Support and guidance are available through course materials and the course instructor. No additional support staff are required.
+
+
+### 2.2 Requirements, Assumptions, and Constraints
+
+#### Determine Requirements
+The main requirement of this project is to achieve the business objective defined earlier, which is to  predict passenger survival using the Titanic dataset while following the CRISP-DM methodology.
+
+There are no legal or security restrictions. The projects timeline is this: 
+Weeks 3.1–3.3 work on
+Business Understanding: Define assignment, read related works, deep dive into the assignment’s domain.
+Data Understanding: Explore and analyse the dataset.
+Data Preparation: Clean, pre-process, and transform the dataset to prepare it for modelling.
+
+Weeks 3.3–3.5 work on
+Modelling: Select, train, and refine machine learning model/s suitable for the problem.
+Evaluation: Assess the model(s) with correct performance metrics and discuss the results.
+
+End of week 3.5 submit
+Hand-in summative deliverable! That is a documented Jupyter notebook.
+
+The results only need to be presented in a Jupyter Notebook for academic assessment.
+
+#### Clarify Assumptions
+There are no economic factors. At the end the instructor expects not only the final results but also a clear explanation of how the results were obtained, including data preparation and modeling steps. Everything should be noted down and properly explained. 
+
+Data assumption
+The survival label is correct
+2urvived correctly indicates whether the passenger survived (0/1).
+
+The important columns represent what they claim
+Age is age in years, Fare is ticket price, Pclass is class
+
+Missing values are not completely random, but are manageable
+Some fields may be missing 
+Passengerid 62 - embarked field missing
+Passengerid 830- embarked field missing
+
+The “zero” columns are non-informative placeholders
+I assume columns full of zeros do not contain useful signal and can be removed after verification.
+
+I assume the dataset is mostly correct and complete enough to perform analysis. I also assume the survival label is reliable, and that missing values and non-informative columns can be handled during data preparation.
+
+#### Verify Constraints
+No passwords are required for this project, the dataset is publicly available and provided for educational purposes as part of the course and this project does not involve any financial costs.
+
+
+### 2.3 Risks and Contingencies
+Scheduling: The projects take 5 weeks.At the end of the week 5 it is necessary to submit the related documents mentioned before.
+Financial: No financial risks
+Data: The data should not be poor quality. It was made for educational purpose by the professors. 
+Results: If the result is not sufficient for the professor will mark fail for the class
+
+
+Contingency plan: 
+Scheduling/Results: I fail the school, or retake this in the next few weeks
+Data: If the data is corrupted, insufficient or problematic, there is 4 other datasets to chose from. 
+
+
+### 2.4 Terminology
+Survived (2urvived)
+Binary target variable indicating whether a passenger survived 1 or did not survive 0.
+
+Binary classification
+A machine learning task where the outcome has two possible values 1 or 2.
+
+Missing values
+Data entries that are not present in the dataset and must be handled during data preparation.
+
+Encoding
+The process of converting categorical variables into numerical form, so they can be used by machine learning models.
+
+CRISP-DM
+A standard data mining methodology used to structure the project from business understanding to evaluation.
+
+### 2.5 Cost/Benefit Analysis
+There are no costs. The benefit of better data understanding is to have better knowledge of statics if a ship crashes and who will survive.
+
+## 3 Determining Data Mining Goals
+
+
+
+
+
+
+
+
+
+
+
+
